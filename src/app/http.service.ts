@@ -12,6 +12,8 @@ export class HttpService {
 
   // how to get xml response
   getData() {
-    //return this.http.get('http://localhost:3000/client_token')
+    return this.http.get('http://localhost:3000/client_token')
+      .map((response: Response) => response.text());
+      //.map(res => res.text())
   }
 }
